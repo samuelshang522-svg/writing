@@ -18,7 +18,7 @@ const fullDate = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric
       {post.data.sample && <div class="sample-notice">Sample article — replace or delete before launch</div>}
       <h1>{post.data.title}</h1>
       {post.data.description && <p class="dek">{post.data.description}</p>}
-      <div class="article-meta"><time datetime={post.data.date.toISOString()}>{fullDate}</time><span aria-hidden="true">·</span><span>{post.data.category}</span></div>
+      <div class="article-meta"><time datetime={post.data.date.toISOString()}>{fullDate}</time></div>
     </header>
     <div class="prose"><Content /></div>
   </article>
