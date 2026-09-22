@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string; }
+const { title = 'Samuel Shang — Writing', description = 'Writing by Samuel Shang.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-name" href="/">Samuel Shang</a>
+        <span class="section-label">Writing</span>
+      </header>
+      <main><slot /></main>
+      <footer>© {new Date().getFullYear()} Samuel Shang</footer>
+    </div>
+  </body>
+</html>
